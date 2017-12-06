@@ -1,0 +1,3216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Find Pelotas</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<p class="navbar-brand">FIND PELOTAS</p>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+  				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    				<ul class="navbar-nav mr-auto">
+      					<li class="nav-item">
+        					<a id="nav-home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      					</li>
+      					<li class="nav-item dropdown">
+        					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locais</a>
+        		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a id="dropdown-turismo" class="dropdown-item" href="#">Turismo</a>
+                <a id="dropdown-cinemas" class="dropdown-item" href="#">Cinemas</a>
+                <a id="dropdown-restaurantes" class="dropdown-item" href="#">Restaurantes</a>
+                <a id="dropdown-lancherias" class="dropdown-item" href="#">Lancherias</a>
+                <a id="dropdown-pizzarias" class="dropdown-item" href="#">Pizzarias</a>
+                <a id="dropdown-bares" class="dropdown-item" href="#">Bares</a>
+        		</div>
+      					</li>
+      					<li class="nav-item">
+        					<a id="nav-about" class="nav-link" href="#">Sobre</a>
+     					 </li>
+    				</ul>
+    					<form class="form-inline my-2 my-lg-0">
+      						<input class="form-control mr-sm-2" type="search" placeholder="Exemplo: Bares, cinemas, escolas etc..." aria-label="Search">
+      							<button id="btPesquisar" class="btn btn-outline-success my-2 my-md-0" type="submit">Pesquisar</button>
+    					</form>
+  				</div>
+	</nav>
+
+  <div class="header">
+    <video class="bg-video" autoplay muted loop="true">
+      <source class="video" src="imagens/pelotas_video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="text-center">
+    <p class="intro">Com o <b>FIND PELOTAS</b> você pode encontrar e conhecer lugares de uma maneira fácil e rápida. 
+      Pesquise por pontos de seu interesse e 
+      saiba localização, hórarios e paginas oficiais para contato.
+    </p>
+  </div>
+
+  <div class="container">
+  <a href="#" class="cardLink">
+    <div id="pontosTuristicos" class="card" style="width: 20rem; height: 285px;">
+      <img class="cardTurismo">
+    <div class="card-body">
+      <p class="card-text">Pontos Turisticos</p>
+    </div>
+    </div>
+  </a>
+
+  <a href="#" class="cardLink">
+    <div id="card-cinemas" class="card" style="width: 20rem; height: 285px;">
+      <img class="cardLazer">
+    <div class="card-body">
+      <p class="card-text-lazer">Cinemas</p>
+    </div>
+    </div>
+  </a>
+
+  <a href="#" class="cardLink">
+    <div id="card-restaurantes" class="card" style="width: 20rem; margin-right: 0px; height: 285px;">
+      <img class="cardRestaurantes">
+    <div class="card-body">
+      <p class="card-text" style="margin-left: 95px;">Restaurantes</p>
+    </div>
+    </div>
+  </a>
+  </div>
+
+  <div class="about">
+    <p class="about-page">
+    <b>FIND PELOTAS</b> é um site que agrega informações de locais na cidade de Pelotas-RS.
+    Assim o visitante pode pesquisar por locais de seu interesse e saber sua localização, hórarios, entre outras informações
+    de uma maneira simples, facíl e prática. O site é feito por um estudante de programação, por isso o site pode ter alguns
+    defeitos e problemas, o site passara por mudanças conforme o tempo, localizações novas serão adicionadas e algumas serão
+    retiradas. Sempre tentando manter o mais atualizado possivel. Qualquer informações que possam ajudar o site serão bem-vindas!
+    Para entrar em contato redes sociais estão no fim do site a direita.
+      <br>
+      <br>
+      <br><b class="about-say">-Se alguém tivesse me falado que software diz respeito à humanidade. Que é algo para ajudar as pessoas com tecnologia de computador,
+      teria mudado minha visâo muito antes.</b>
+    </p>
+  </div>
+
+  <div class="pontos-turisticos">
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/mercado.jpg" alt="Mercado publico">
+      <h4 class="card-title">Mercado Central</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Praça Sete de Julho, 179 - Centro, Pelotas - RS, 96020-010</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal1" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/baronesa2.jpg" alt="Museu da baronesa">
+      <h4 class="card-title">Museu da Baronesa</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Domingos de Almeida, 1490 - Areal, Pelotas - RS, 96085-470</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal2" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/pracaCoronel.jpg" alt="Praça Coronel Pedro Osório">
+      <h4 class="card-title">Praça Coronel Pedro Osório</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Quinze de Novembro - Centro, Pelotas - RS, 96010-150</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal3" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0;">
+      <img class="card-img-top" src="imagens/teatroGuarany.jpg" alt="Teatro Guarany">
+      <h4 class="card-title">Teatro Guarany</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Lôbo da Costa, 849 - Centro, Pelotas - RS, 96010-150</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal4" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/catedral.jpg" alt="Catedral Metropolitana São Francisco de Paula">
+      <h4 class="card-title">Catedral Metropolitana São Francisco de Paula</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Praça José Bonifácio, 15 - Centro, Pelotas - RS, 96015-170</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal5" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/grandeHotel.jpg" alt="Grande Hotel">
+      <h4 class="card-title">Grande Hotel</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Lôbo da Costa, 51 - Centro, Pelotas - RS, 96010-150</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal6" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/biblioteca.jpg" alt="Biblioteca Publica">
+      <h4 class="card-title">Biblioteca Pública</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Praça Cel. Pedro Osório, 103 - Centro, Pelotas - RS, 96010-150</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal7" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/igrejaCabeluda.jpg" alt="Catedral do Redentor - Igreja Cabeluda">
+      <h4 class="card-title">Catedral do Redentor - Igreja Cabeluda</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gen. Téles, 711 - Centro, Pelotas - RS, 96010-165</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal8" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/charqueadasSJ.jpg" alt="Charqueadas São João">
+      <h4 class="card-title">Charqueadas São João</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Estrada da Costa, 750, Pelotas - RS, 96085-100</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal9" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/casteloSL.jpg" alt="Castelo Simões Lopes">
+      <h4 class="card-title">Castelo Simões Lopes</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Brasil, 824 - Fragata, Pelotas - RS, 96025-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal10" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/laranjal.jpg" alt="Laranjal">
+      <h4 class="card-title">Praia do Laranjal</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Praia do Laranjal</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal11" style="width: 90%; margin: 30px auto;">Mais informações</button>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/barroDuro.jpg" alt="Praia Do Barro Duro">
+      <h4 class="card-title">Praia Do Barro Duro</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">789, Av. Minas Gerais, 583 - Laranjal, Pelotas - RS, 96095-180</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal12" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/museuDoDoce.jpg" alt="Museu do Doce">
+      <h4 class="card-title">Museu do Doce - UFPel</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Praça Cel. Pedro Osório, Casarão 8 - Centro, Pelotas - RS, 96015-010</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal13" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/museuDeArteLG.jpg" alt="Museu de Arte Leopoldo Gotuzzo">
+      <h4 class="card-title">Museu de Arte Leopoldo Gotuzzo</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gen. Osório, 725 - Centro, Pelotas - RS, 96020-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal14" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/museuCarlosRitter.jpg" alt="Museu de Ciências Naturais Carlos Ritter">
+      <h4 class="card-title">Museu de Ciências Naturais Carlos Ritter</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Barão de Santa Tecla, 576 - Centro, Pelotas - RS, 96010-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal15" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/parqueDom.jpg" alt="Praia Do Barro Duro">
+      <h4 class="card-title" style="margin-left: 10px">Parque Dom Antônio Zattera</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Bento Gonçalves, 3568-3678 - Porto, Pelotas - RS, 96015-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal16" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/rodoviaria.jpg" alt="Rodoviária de Pelotas - Eterpel">
+      <h4 class="card-title">Rodoviária de Pelotas - Eterpel</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Pres. João Goulart, 4608 - COHAB Guabiroba, Pelotas - RS, 96040-010</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal17" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/praca-piratinino.jpg" alt="Praça Piratinino de Almeida">
+      <h4 class="card-title">Praça Piratinino de Almeida</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Praça 20 de Setembro - Centro, Pelotas - RS, 96015-290</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal18" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/praca-capriano.jpg" alt="Praça Cipriano Barcelos">
+      <h4 class="card-title">Praça Cipriano Barcelos</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Lôbo da Costa, 58 - Centro, Pelotas - RS, 96010-150</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal19" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/charqueadas-santa-rita.jpg" alt="Charqueada Santa Rita">
+      <h4 class="card-title">Charqueada Santa Rita</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Estrada da Costa 200 - Areal, Pelotas - RS, 96085-100</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal20" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="restaurantes-bares">
+      <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/mcdonalds1.jpg" alt="McDonald's">
+      <h4 class="card-title">McDonald's</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Bento Gonçalves, 3214 - Centro, Pelotas - RS, 96015-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal57" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/cafepontocom.jpg" alt="Cafe.com">
+      <h4 class="card-title">Cafe.Com</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Quinze de Novembro, 709 - Centro, Pelotas - RS, 96015-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal58" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/cafeaquarius.JPG" alt="Café Aquários">
+      <h4 class="card-title">Café Aquários</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Quinze de Novembro, 602 - Centro, Pelotas - RS, 96015-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal59" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0;">
+      <img class="card-img-top" src="imagens/picanhaExpress.jpg" alt="Picanha Express">
+      <h4 class="card-title">Picanha Express</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Quinze de Novembro, 732 - Centro, Pelotas - RS, 96015-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal60" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/otto.jpg" alt="Confeitaria Otto">
+      <h4 class="card-title">Confeitaria Otto</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. 7 de Setembro, 304 - Centro, Pelotas - RS, 96015-300</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal61" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/allesBlau.jpg" alt="Alles Blau">
+      <h4 class="card-title">Alles Blau</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. 7 de Setembro, 354 - Centro, Pelotas - RS, 96015-300</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal62" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/churrascaria-lobao.jpg" alt="Churrascaria Lobão">
+      <h4 class="card-title">Churrascaria Lobão</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Bento Gonçalves, 3460 - Centro, Pelotas - RS, 96015-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal63" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/cruz-de-malta.jpg" alt="Cruz de Malta">
+      <h4 class="card-title">Cruz de Malta</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Parque Dom Antônio Zattera, 143 - Centro, Pelotas - RS, 96015-180</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal64" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/el-paisano.jpg" alt="Parrillada El Paisano">
+      <h4 class="card-title">Parrillada El Paisano</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Mal. Deodoro, 1093C - Centro, Pelotas - RS, 96020-220</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal65" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/grelhados-batuva.jpg" alt="Grelhados Batuva">
+      <h4 class="card-title">Grelhados Batuva</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gen. Osório, 454 - Centro, Pelotas - RS, 96020-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal66" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/shanghay-sushi.jpg" alt="Shanghay Sushi Lounge">
+      <h4 class="card-title">Shanghay Sushi Lounge</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Mal. Deodoro, 1231 - Centro, Pelotas - RS, 96020-220</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal67" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/trem-bao.jpg" alt="Trem Bão">
+      <h4 class="card-title">Trem Bão</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gen. Osório, 461 - Centro, Pelotas - RS, 96020-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal68" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/polo-norte.JPG" alt="Polo Norte">
+      <h4 class="card-title">Polo Norte</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> R. Gen. Osório, 1380 - Centro, Pelotas - RS, 96020-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal69" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/chu.jpg" alt="Chu">
+      <h4 class="card-title">Chu</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Andrade Neves, 3800 - Centro, Pelotas - RS, 96020-080</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal70" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/cruz-de-malta2.jpg" alt="Choperia Cruz de Malta">
+      <h4 class="card-title">Choperia Cruz de Malta</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Andrade Neves, 4183 - Centro, Pelotas - RS, 96020-080</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal71" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/madre-mia.jpg" alt="Madre Mia!">
+      <h4 class="card-title">Madre Mia!</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Santa Cruz, 2200 - Centro, Pelotas - RS, 96010-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal72" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/ristorante-visuvio.jpg" alt="Ristorante Vesúvio">
+      <h4 class="card-title">Ristorante Vesúvio</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Marcílio Dias, 1090 - Centro, Pelotas - RS, 96020-480</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal73" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/tio-hugo.jpg" alt="Tio Hugo">
+      <h4 class="card-title">Tio Hugo</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Prof. Dr. Araújo, 1907 - Centro, Pelotas - RS, 96020-360</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal74" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/tradicao.png" alt="Churrascaria Tradição">
+      <h4 class="card-title">Churrascaria Tradição</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Barão de Santa Tecla, 755 - Centro, Pelotas - RS, 96075-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal75" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/mendes.jpg" alt="Mendes Refeições">
+      <h4 class="card-title">Mendes Refeições</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Dr. Arnaldo da Silva Ferreira, Ap 102 - Fragata, Pelotas - RS, 96040-050</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal76" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="cinemas">
+      <div id="card-cinema" class="card" style="width: 45rem;">
+        <img class="card-img-top-cineflix" src="imagens/cineflix.jpg" alt="Cineflix Shopping Pelotas">
+          <h4 class="card-title">Cineflix Shopping Pelotas</h4>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Av. Ferreira Viana, 1526 - Areal, Pelotas - RS, 96085-000</li>
+              </ul>
+                <a href="http://www.cineflix.com.br/programacao/shopping-pelotas/">
+                  <img src="imagens/cineflix-logo.png" style="height: 60px; width: 105px; margin: 15px 0px 0px 20px;">
+                </a>
+                <a href="https://www.facebook.com/cineflixshoppingpelotas/">
+                  <img src="imagens/fb-logo.png" style="height: 60px; width: 60px; margin: 15px 0px 0px 100px;">
+                </a>
+            </div>
+      </div>
+
+      <div id="card-cinema" class="card" style="width: 45rem; margin-right: 0;">
+        <img class="card-img-top-cineart" src="imagens/cineart.jpg" alt="Cineart Cinema - Pelotas">
+          <h4 class="card-title">Cineart Cinema - Pelotas</h4>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Shopping Calçadão - Rua Andrade Neves, 1934, Pelotas - RS, 96015-280</li>
+              </ul>
+                <a href="https://www.cineartpelotas.com.br/">
+                  <img src="imagens/cineart-logo.png" style="height: 60px; width: 105px; margin: 15px 0px 0px 20px;">
+                </a>
+                <a href="https://www.facebook.com/Cineartpelotas/">
+                  <img src="imagens/fb-logo.png" style="height: 60px; width: 60px; margin: 15px 0px 0px 100px;">
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="pizzarias">
+      <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/bela-napoli.jpg" alt="Bella Napoli">
+      <h4 class="card-title">Bella Napoli</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gonçalves Chaves, 1123 - Centro, Pelotas - RS, 96015-560</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal21" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/pizzarela.jpg" alt="Pizzaria Pizzarela">
+      <h4 class="card-title">Pizzaria Pizzarela</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Anchieta, 2980 - Centro, Pelotas - RS, 96020-720</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal22" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/universitalia.jpg" alt="Universitalia">
+      <h4 class="card-title">Universitalia</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Bento Gonçalves, 3439 - Centro, Pelotas - RS, 96015-145</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal23" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0;">
+      <img class="card-img-top" src="imagens/pizza-com.jpg" alt="Pizza.com">
+      <h4 class="card-title">Pizza.com</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Dom Pedro II, 372 - Centro, Pelotas - RS, 96010-300</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal24" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/verace.jpg" alt="Verace Italia">
+      <h4 class="card-title">Verace Italia</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Prof. Dr. Araújo, 1399 - Centro, Pelotas - RS, 96020-080</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal25" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/sabores-do-sul.jpg" alt="Sabores do Sul">
+      <h4 class="card-title">Sabores do Sul</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Mal. Deodoro, 912 - Centro, Pelotas - RS, 96020-220</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal26" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/rei-da-pizza.jpeg" alt="Rei da Pizza">
+      <h4 class="card-title">Rei da Pizza</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Bento Gonçalves, 3950 - Porto, Pelotas - RS, 96075-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal27" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/cantinaBento.jpg" alt="Cantina da Bento">
+      <h4 class="card-title">Cantina da Bento</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Bento Gonçalves, 4153 - Colina do Sol, Pelotas - RS, 96015-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal28" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/nella-pietra-pizza.jpg" alt="Nella Pietra Pizza">
+      <h4 class="card-title">Nella Pietra Pizza</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gen. Téles, 521 - Centro, Pelotas - RS, 96010-310</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal29" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/pizza-hut.jpg" alt="Pizza Hut Pelotas">
+      <h4 class="card-title">Pizza Hut Pelotas</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gonçalves Chaves, 2920 - Centro, Pelotas - RS, 96015-560</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal30" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/mamma-pizza.jpg" alt="Cantina de Mamma Pizza">
+      <h4 class="card-title">Cantina de Mamma Pizza</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gen. Osório, 720 A - Centro, Pelotas - RS, 96020-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal31" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/elsabory.jpg" alt="Sorveteria e Pizzaria El Sabory">
+      <h4 class="card-title">Sorveteria e Pizzaria El Sabory</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Pinheiro Machado, 67 - Fragata, Pelotas - RS, 96040-500</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal32" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="bares">
+      <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/bud-bar.jpg" alt="Bud Bar">
+      <h4 class="card-title">Bud Bar</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Anchieta, 3178 - Centro, Pelotas - RS, 96015-420</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal33" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/joao-bar.jpg" alt="João Gilberto Bar">
+      <h4 class="card-title">João Gilberto Bar</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Gonçalves Chaves, 430 - Centro, Pelotas - RS, 96015-560</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal34" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/papuera-bar.jpg" alt="Papuera Bar">
+      <h4 class="card-title">Papuera Bar</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Cel. Alberto Rosa, 51 - Centro, Pelotas - RS, 96010-290</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal35" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0;">
+      <img class="card-img-top" src="imagens/johnnie-jack.jpg" alt="Johnnie Jack">
+      <h4 class="card-title">Johnnie Jack</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Félix Xavier da Cunha, 555 - Centro, Pelotas - RS, 96010-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal36" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/escritorio-bar.jpg" alt="O Escritório Bar">
+      <h4 class="card-title">O Escritório Bar</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Fernando Osório, 866 - Centro, Pelotas - RS, 96020-480</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal37" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/botequin-gordas.jpg" alt="Botequim Das Goordas">
+      <h4 class="card-title">Botequim Das Goordas</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Parque Dom Antônio Zattera, 279 entre amarante e bento - Centro, Pelotas - RS, 96015-180</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal38" style="width: 90%; margin: 5px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/bar-do-ze.jpg" alt="Bar do Zé">
+      <h4 class="card-title">Bar do Zé</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Conde de Porto Alegre, 201 - Centro, Pelotas - RS, 96010-290</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal39" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/boteco-do-cruz.jpg" alt="Boteco do Cruz">
+      <h4 class="card-title">Boteco do Cruz</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Quinze de Novembro, 701 - Centro, Pelotas - RS, 96015-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal40" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/sherlok-pub.jpg" alt="Sherlock Pub">
+      <h4 class="card-title">Sherlock Pub</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Três de Maio, 866 - Centro, Pelotas - RS, 96010-620</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal41" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/cruz-de-malta2.jpg" alt="Choperia Cruz de Malta">
+      <h4 class="card-title">Choperia Cruz de Malta</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Andrade Neves, 4183 - Centro, Pelotas - RS, 96020-080</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal42" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/diabluras.jpg" alt="Diabluras Gastronômicas - Pub & Petisqueria">
+      <h4 class="card-title">Diabluras Gastronômicas - Pub e Petisqueria</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Félix Xavier da Cunha, 954 - Centro, Pelotas - RS, 96010-770</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal43" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/madre-mia.jpg" alt="Madre Mia!">
+      <h4 class="card-title">Madre Mia!</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Santa Cruz, 2200 - Centro, Pelotas - RS, 96010-140</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal44" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="lancherias">
+      <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/polaka-lanches.jpg" alt="Polaka Lanches Pelotas">
+      <h4 class="card-title">Polaka Lanches Pelotas</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Irmão Gabino Gerardo, 223 - Fragata, Pelotas - RS, 96040-120</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal45" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/dagos-lanches.jpg" alt="Dago's Lanches">
+      <h4 class="card-title">Dago's Lanches</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Visc. da Graça, 614 - Centro, Pelotas - RS, 96025-370</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal46" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem;">
+      <img class="card-img-top" src="imagens/rm-lanches.jpg" alt="RM Lanches">
+      <h4 class="card-title">RM Lanches</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Afonso Pena, 66 - Fragata, Pelotas - RS, 96040-110</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal47" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-right: 0;">
+      <img class="card-img-top" src="imagens/komilao-lanches.jpg" alt="Komilão Lanches">
+      <h4 class="card-title">Komilão Lanches</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Prof. Dr. Araújo, 207 - Centro, Pelotas - RS, 96015-300</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal48" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/circulus1-lanches.jpg" alt="Circulu's Lanches">
+      <h4 class="card-title">Circulu's Lanches (Deodoro)</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Mal. Deodoro, 1011 - Centro, Pelotas - RS, 96020-220</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal49" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/circulus2-lanches.jpg" alt="Circulu's Lanches">
+      <h4 class="card-title">Circulu's Lanches(Três de Maio)</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Três de Maio, 1353 - Centro, Pelotas - RS, 96010-620</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal50" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/sanata1-lanches.jpg" alt="Sanata Lanches">
+      <h4 class="card-title">Sanata Lanches da Três de maio</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Três de Maio, 243 - Centro, Pelotas - RS, 96010-620</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal51" style="width: 90%; margin: 3px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px; margin-right: 0;">
+      <img class="card-img-top" src="imagens/sanata2-lanches.jpg" alt="Sanata Lanches">
+      <h4 class="card-title">Sanata Lanches Anchieta</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Anchieta, 1243 - Centro, Pelotas - RS, 96015-420</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal52" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/dada-lanches.jpg" alt="Dadá Lanches & Pizza">
+      <h4 class="card-title">Dadá Lanches e Pizza</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Benjamin Constant, 1498 - Centro, Pelotas - RS, 96010-020</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal53" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/ronaldo-lanches.jpg" alt="Ronaldo Lanches">
+      <h4 class="card-title">Ronaldo Lanches</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">R. Leopoldo de Souza Soares, 361 - Três Vendas, Pelotas - RS, 96060-460</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal54" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px;">
+      <img class="card-img-top" src="imagens/mak-mello.jpg" alt="Lanches Mak Mello">
+      <h4 class="card-title">Lanches Mak Mello</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Duque de Caxias, 520, Pelotas - RS, 96030-000</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal55" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    <div id="card-turismo" class="card" style="width: 21rem; margin-top: 50px; margin-right: 0;">
+      <img class="card-img-top" src="imagens/polonga-lanches.jpg" alt="Polonga Lanches">
+      <h4 class="card-title">Polonga Lanches</h4>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Av. Duque de Caxias, 1140 - Fragata, Pelotas - RS, 96030-003</li>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal56" style="width: 90%; margin: 16px auto;">Mais informações</button>
+          </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mercado Central</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+                <b style="color: #117a8b;">Horário:</b><br>
+              <b>segunda-feira</b> 08:00–19:00<br>
+              <b>terça-feira</b> 08:00–19:00<br>
+              <b>quarta-feira</b> 08:00–19:00<br>
+              <b>quinta-feira</b> 08:00–19:00<br>
+              <b>sexta-feira</b> 08:00–19:00<br>
+              <b>sábado</b> 08:00–18:00<br>
+              <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-3733
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.990838034526!2d-52.345054184279995!3d-31.77073582066103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59661dc74a7%3A0xb301693aaaa5dd6a!2sMercado+Central!5e0!3m2!1spt-BR!2sbr!4v1512422646981" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Museu da Baronesa</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 13:30-17:45<br>
+            <b>terça-feira</b> 08:00–19:00<br>
+            <b>quarta-feira</b> 08:00–19:00<br>
+            <b>quinta-feira</b> 08:00–19:00<br>
+            <b>sexta-feira</b> 08:00–19:00<br>
+            <b>sábado</b> 08:00–18:00<br>
+            <b>domingo</b> Fechado<br>
+          </p>
+          <p style="width: 50%; float: left;">
+              <b>Telefone: (53) 3228-4606</b> 
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.5164725718755!2d-52.322050884280074!3d-31.75639661995894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5acc82ac7fd%3A0xd5dece4fc33c0633!2sMuseu+da+Baronesa!5e0!3m2!1spt-BR!2sbr!4v1512425766482" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Praça Coronel Pedro Osório</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0296982441932!2d-52.34394688428015!3d-31.7696759206091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59603ab68d1%3A0xfba4e75024af75ea!2sPra%C3%A7a+Cel.+Pedro+Os%C3%B3rio+-+Centro%2C+Pelotas+-+RS!5e0!3m2!1spt-BR!2sbr!4v1512426156871" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Teatro Guarany</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+          <p style="width: 50%; float: left;">
+             <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 08:00-18:00<br>
+            <b>terça-feira</b> 08:00–18:00<br>
+            <b>quarta-feira</b> 08:00–18:00<br>
+            <b>quinta-feira</b> 08:00–18:00<br>
+            <b>sexta-feira</b> 08:00–18:00<br>
+            <b>sábado</b> 08:00-11:00<br>
+            <b>domingo</b> Fechado<br>
+          </p>
+          <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-7636
+            </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.973561568976!2d-52.34202638427983!3d-31.771207020684162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5bf345cea03%3A0x7a2164e29d3dfd5e!2sTheatro+Guarany!5e0!3m2!1spt-BR!2sbr!4v1512426460516" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Catedral Metropolitana São Francisco de Paula</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+          <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 08:00-18:00<br>
+            <b>terça-feira</b> 08:00–18:00<br>
+            <b>quarta-feira</b> 08:00–18:00<br>
+            <b>quinta-feira</b> 08:00–18:00<br>
+            <b>sexta-feira</b> 08:00–18:00<br>
+            <b>sábado</b> 08:00-11:00<br>
+            <b>domingo</b> Fechado<br>
+          </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.246159787962!2d-52.34065868428006!3d-31.76377142032003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5968ed787ad%3A0x5a77c668b6379f6b!2sCatedral+Metropolitana+S%C3%A3o+Francisco+de+Paula!5e0!3m2!1spt-BR!2sbr!4v1512429671731" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Grande Hotel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-1998
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.9855766564397!2d-52.34349168427994!3d-31.77087932066796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5960931fac5%3A0x43ceed6f54d971fd!2sGrande+Hotel!5e0!3m2!1spt-BR!2sbr!4v1512429866076" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Biblioteca Pública</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 09:00-18:00<br>
+            <b>terça-feira</b> 09:00–18:00<br>
+            <b>quarta-feira</b> 09:00–18:00<br>
+            <b>quinta-feira</b> 09:00–18:00<br>
+            <b>sexta-feira</b> 09:00–18:00<br>
+            <b>sábado</b> Fechado<br>
+            <b>domingo</b> Fechado<br>
+          </p>
+          <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-3856
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2852.3048391885095!2d-52.34066472707731!3d-31.770998446860055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x314fcd9c09b19d7c!2sBiblioteca+P%C3%BAblica+Pelotense!5e0!3m2!1spt-BR!2sbr!4v1512430273782" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Catedral do Redentor - Igreja Cabeluda</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 13:30-17:30<br>
+            <b>terça-feira</b> 13:30-17:30<br>
+            <b>quarta-feira</b> 13:30-17:30<br>
+            <b>quinta-feira</b> 13:30-17:30<br>
+            <b>sexta-feira</b> 13:30-17:30<br>
+            <b>sábado</b> Fechado<br>
+            <b>domingo</b> 9:30-12:00
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-5679
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.929620269372!2d-52.34456465658868!3d-31.77240545182296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b594227a4057%3A0x77883010c4daf080!2sCatedral+do+Redentor+-+Igreja+Cabeluda!5e0!3m2!1spt-BR!2sbr!4v1512430518711" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Charqueadas São João</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 09:00-18:00<br>
+            <b>terça-feira</b> 09:00–18:00<br>
+            <b>quarta-feira</b> 09:00–18:00<br>
+            <b>quinta-feira</b> 09:00–18:00<br>
+            <b>sexta-feira</b> 09:00–18:00<br>
+            <b>sábado</b> 08:00-11:00<br>
+            <b>domingo</b> 14:00-18:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3228-2425
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.269886838506!2d-52.27597698428081!3d-31.73583351895263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b47127f0f193%3A0x7bd57f728bd2ace5!2zQ2hhcnF1ZWFkYSBTw6NvIEpvw6Nv!5e0!3m2!1spt-BR!2sbr!4v1512433509430" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Castelo Simões Lopes</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.8366690015573!2d-52.35541358427976!3d-31.774940420866987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b58e7cab6b29%3A0x7c5772d615dd5375!2sCastelo+Sim%C3%B5es+Lopes!5e0!3m2!1spt-BR!2sbr!4v1512433824079" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Praia do Laranjal</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.5489035437226!2d-52.230365484280235!3d-31.75551171991567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b229f441558d%3A0x1290db9ad71937e6!2sPraia+do+Laranjal!5e0!3m2!1spt-BR!2sbr!4v1512433927039" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Praia Do Barro Duro</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.1731253557077!2d-52.21432858428053!3d-31.73847511908197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b2162bff62f9%3A0xeb6e756ef1dd3597!2sPraia+Do+Barro+Duro!5e0!3m2!1spt-BR!2sbr!4v1512434057276" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Museu do Doce - UFPel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 14:00-17:30<br>
+            <b>terça-feira</b> 14:00-17:30<br>
+            <b>quarta-feira</b> 14:00-17:30<br>
+            <b>quinta-feira</b> 14:00-17:30<br>
+            <b>sexta-feira</b> 14:00-17:30<br>
+            <b>sábado</b> 14:00-17:30<br>
+            <b>domingo</b> 14:00-17:30</li>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3921-6291 
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.998229593188!2d-52.342087684279996!3d-31.77053422065113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5bdf881abb5%3A0xd882f8c7c87e965a!2sMuseu+do+Doce+-+UFPel!5e0!3m2!1spt-BR!2sbr!4v1512434158977" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Museu de Arte Leopoldo Gotuzzo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-9144
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.142415249675!2d-52.34528668428009!3d-31.766601420458542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b599d2f94551%3A0x458a8025e9884022!2sMuseu+de+Arte+Leopoldo+Gotuzzo+-+MALG!5e0!3m2!1spt-BR!2sbr!4v1512434545093" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Museu de Ciências Naturais Carlos Ritter</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 09:00-16:00<br>
+            <b>terça-feira</b> 09:00-16:00<br>
+            <b>quarta-feira</b> 09:00-16:00<br>
+            <b>quinta-feira</b> 09:00-16:00<br>
+            <b>sexta-feira</b> 09:00-16:00<br>
+            <b>sábado</b> Fechado<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-0880
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.2536342073436!2d-52.34591448428011!3d-31.763567520310033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5991c89c34f%3A0x99bfb04a69086a48!2sMuseu+de+Ci%C3%AAncias+Naturais+Carlos+Ritter!5e0!3m2!1spt-BR!2sbr!4v1512435186209" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Parque Dom Antônio Zattera</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3735929433733!2d-52.34125118428015!3d-31.760294920149853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a22906adc7%3A0x2075f112cdf846cb!2sParque+Dom+Ant%C3%B4nio+Zattera!5e0!3m2!1spt-BR!2sbr!4v1512435337230" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Rodoviária de Pelotas - Eterpel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+              Aberto 24 Horas
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> Telefone: (53) 3284-6700
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.5484820818856!2d-52.36107228428049!3d-31.75552321991611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b57d0b206d75%3A0x891889f3f9711d24!2sRodovi%C3%A1ria+de+Pelotas+-+Eterpel!5e0!3m2!1spt-BR!2sbr!4v1512435552236" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal18" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Praça Piratinino de Almeida</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1579957879317!2d-52.34797928428014!3d-31.766176420437755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59a259350cb%3A0x46bbc885235a6f9c!2sPra%C3%A7a+Piratinino+de+Almeida!5e0!3m2!1spt-BR!2sbr!4v1512435696659" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Praça Cipriano Barcelos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.082840882305!2d-52.34879568427992!3d-31.768226420538134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59a7677b32b%3A0x6605a3d76b88dc64!2sPra%C3%A7a+Cipriano+Barcelos!5e0!3m2!1spt-BR!2sbr!4v1512435864735" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Charqueada Santa Rita</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3028-2024
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.925910537511!2d-52.29051918428061!3d-31.74522321941206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b4645f2e8f21%3A0x999dd9036b8fb631!2sCharqueada+Santa+Rita!5e0!3m2!1spt-BR!2sbr!4v1512435957082" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bella Napoli</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 09:00-23:00<br>
+            <b>quarta-feira</b> 09:00-23:00<br>
+            <b>quinta-feira</b> 09:00-23:00<br>
+            <b>sexta-feira</b> 109:00-23:00<br>
+            <b>sábado</b> 09:00-23:00<br>
+            <b>domingo</b> 09:00-23:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-3940
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.327954504923!2d-52.33777898428029!3d-31.76154002021065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a39b079237%3A0x69bfae868f8f1743!2sBella+Napoli!5e0!3m2!1spt-BR!2sbr!4v1512441953061" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pizzaria Pizzarela</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> Fechado<br>
+            <b>quarta-feira</b> 19:00-00:00<br>
+            <b>quinta-feira</b> 19:00-00:00<br>
+            <b>sexta-feira</b> 19:00-00:00<br>
+            <b>sábado</b> 19:00-00:00<br>
+            <b>domingo</b> 19:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-4767
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.390603857339!2d-52.33843698428018!3d-31.759830820127053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a1bf62cad9%3A0x2e05e9a9d06f2bc4!2sPizzaria+Pizzarela!5e0!3m2!1spt-BR!2sbr!4v1512442238863" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal23" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Universitalia</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-23:30<br>
+            <b>terça-feira</b> 19:00-23:30<br>
+            <b>quarta-feira</b> 19:00-23:30<br>
+            <b>quinta-feira</b> 19:00-23:30<br>
+            <b>sexta-feira</b> 19:00-23:30<br>
+            <b>sábado</b> 19:00-23:30<br>
+            <b>domingo</b> 19:00-23:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3025-2181
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3088350748903!2d-52.33907408428023!3d-31.762061620236334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a3afa8ba47%3A0x9f9554e6fbe21dcf!2sUniversitalia!5e0!3m2!1spt-BR!2sbr!4v1512442428325" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal24" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pizza.com</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:30-00:00<br>
+            <b>terça-feira</b> 18:30-00:00<br>
+            <b>quarta-feira</b> 18:30-00:00<br>
+            <b>quinta-feira</b> 18:30-00:00<br>
+            <b>sexta-feira</b> 18:30-00:00<br>
+            <b>sábado</b> 18:30-00:00<br>
+            <b>domingo</b> 18:30-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3025-5684
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.8091230128703!2d-52.33716928427976!3d-31.775691620903718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5c009110479%3A0xb2495090c25a548f!2sPizza.com!5e0!3m2!1spt-BR!2sbr!4v1512442582930" width="600" height="450" frameborder="0" style="border:0; margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal25" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Verace Italia</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-00:00<br>
+            <b>terça-feira</b> 19:00-00:00<br>
+            <b>quarta-feira</b> 19:00-00:00<br>
+            <b>quinta-feira</b> 19:00-00:00<br>
+            <b>sexta-feira</b> 19:00-00:00<br>
+            <b>sábado</b> 19:00-00:00<br>
+            <b>domingo</b> 19:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3342-0008
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.4681086430933!2d-52.346551684280264!3d-31.757716220023582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a271557519%3A0x9bde41d2f2efb7d3!2sVerace+Italia!5e0!3m2!1spt-BR!2sbr!4v1512442825803" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal26" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sabores do Sul</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 19:30-23:30<br>
+            <b>quarta-feira</b> 19:30-23:30<br>
+            <b>quinta-feira</b> 19:30-23:30<br>
+            <b>sexta-feira</b> 19:30-23:30<br>
+            <b>sábado</b> 19:30-23:30<br>
+            <b>domingo</b> 19:30-23:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3305-0874
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.271255191784!2d-52.34467628428018!3d-31.763086820286485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b598de24a683%3A0xb7f22b5fa7047abe!2sSabores+do+Sul!5e0!3m2!1spt-BR!2sbr!4v1512442974627" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal27" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Rei da Pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-23:30<br>
+            <b>terça-feira</b> 19:00-23:30<br>
+            <b>quarta-feira</b> 19:00-23:30<br>
+            <b>quinta-feira</b> 19:00-23:30<br>
+            <b>sexta-feira</b> 19:00-23:30<br>
+            <b>sábado</b> 19:00-23:30<br>
+            <b>domingo</b> 19:00-23:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3305-3440
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3849885576255!2d-52.344090284280185!3d-31.75998402013452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59f1024dc1d%3A0x7bd8f38b5a75b14c!2sRei+da+Pizza!5e0!3m2!1spt-BR!2sbr!4v1512443075805" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal28" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cantina da Bento</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:30-00:00<br>
+            <b>terça-feira</b> 19:30-00:00<br>
+            <b>quarta-feira</b> 19:30-00:00<br>
+            <b>quinta-feira</b> 19:30-00:00<br>
+            <b>sexta-feira</b> 19:30-00:00<br>
+            <b>sábado</b> 19:30-00:00<br>
+            <b>domingo</b> 19:30-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3272-3634
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.397835535925!2d-52.34662228428014!3d-31.759633520117475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59e65fa215b%3A0x209a03e159299914!2sCantina+da+Bento!5e0!3m2!1spt-BR!2sbr!4v1512443218295" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal29" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nella Pietra Pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-23:15<br>
+            <b>terça-feira</b> 19:00-23:15<br>
+            <b>quarta-feira</b> 19:00-23:15<br>
+            <b>quinta-feira</b> 19:00-23:15<br>
+            <b>sexta-feira</b> 19:00-23:15<br>
+            <b>sábado</b> 19:00-23:15<br>
+            <b>domingo</b> 19:00-23:15<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3325-0100
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3849079199854!2d-52.33685418428022!3d-31.75998622013463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a40834bb9f%3A0xd3ecb8205a74eb59!2sNella+Pietra+Pizza!5e0!3m2!1spt-BR!2sbr!4v1512443259250" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal30" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pizza Hut Pelotas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-23:00<br>
+            <b>terça-feira</b> 18:00-23:00<br>
+            <b>quarta-feira</b> 18:00-23:00<br>
+            <b>quinta-feira</b> 18:00-23:00<br>
+            <b>sexta-feira</b> 18:00-23:00<br>
+            <b>sábado</b> 18:00-23:00<br>
+            <b>domingo</b> 18:00-23:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 4002-6565
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.365730681039!2d-52.3370221842802!3d-31.760509420160332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a3f4d26cd1%3A0x7c00cc0a321f2b38!2sPizza+Hut+Pelotas!5e0!3m2!1spt-BR!2sbr!4v1512443387251" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal31" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cantina de Mamma Pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-00:00<br>
+            <b>terça-feira</b> 19:00-00:00<br>
+            <b>quarta-feira</b> 19:00-00:00<br>
+            <b>quinta-feira</b> 19:00-00:00<br>
+            <b>sexta-feira</b> 19:00-00:00<br>
+            <b>sábado</b> 19:00-00:00<br>
+            <b>domingo</b> 19:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-2423
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1350318423642!2d-52.34499818427996!3d-31.766802820468463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b599d5dca9e3%3A0x4f260e0a6454acd8!2sCantina+de+Mamma+Pizza!5e0!3m2!1spt-BR!2sbr!4v1512443497587" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal32" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sorveteria e Pizzaria El Sabory</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 20:00-00:00<br>
+            <b>quarta-feira</b> 20:00-00:00<br>
+            <b>quinta-feira</b> 20:00-00:00<br>
+            <b>sexta-feira</b> 20:00-00:00<br>
+            <b>sábado</b> 20:00-00:00<br>
+            <b>domingo</b> 20:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3271-2887
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.5581170319197!2d-52.38679578428032!3d-31.755260319903353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511caeb11d4a117%3A0x62da7598ebb23b8e!2sSorveteria+e+Pizzaria+El+Sabory!5e0!3m2!1spt-BR!2sbr!4v1512443582633" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal33" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bud Bar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> Fechado<br>
+            <b>quarta-feira</b> 19:30-01:00<br>
+            <b>quinta-feira</b> 19:30-01:00<br>
+            <b>sexta-feira</b> 19:30-01:00<br>
+            <b>sábado</b> 19:30-01:00<br>
+            <b>domingo</b> 19:30-01:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 98126-1363
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.4569080101114!2d-52.33762618428011!3d-31.758021820038604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a139ebd791%3A0xa77ca6c0f1552149!2sBud+Bar!5e0!3m2!1spt-BR!2sbr!4v1512444868632" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal34" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">João Gilberto Bar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> Fechado<br>
+            <b>quarta-feira</b> 21:00-06:00<br>
+            <b>quinta-feira</b> 21:00-06:00<br>
+            <b>sexta-feira</b> 21:00-06:00<br>
+            <b>sábado</b> 21:00-06:30<br>
+            <b>domingo</b> 21:00-06:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 98403-0313
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.89069954227!2d-52.34251348427984!3d-31.773466920794885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5956ff5a025%3A0x17174cea3157c342!2sJo%C3%A3o+Gilberto+Bar!5e0!3m2!1spt-BR!2sbr!4v1512444928291" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal35" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Papuera Bar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 19:00-04:00<br>
+            <b>quarta-feira</b> 19:00-04:00<br>
+            <b>quinta-feira</b> 19:00-04:00<br>
+            <b>sexta-feira</b> 19:00-05:00<br>
+            <b>sábado</b> 21:00-05:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3025-3426
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.634424162596!2d-52.342517684279755!3d-31.780455421137045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5ea0144692f%3A0x81ed799720755058!2sPapuera+Bar!5e0!3m2!1spt-BR!2sbr!4v1512445029535" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal36" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Johnnie Jack</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 20:00-00:00<br>
+            <b>quarta-feira</b> 20:00-00:00<br>
+            <b>quinta-feira</b> 20:00-00:00<br>
+            <b>sexta-feira</b> 20:00-01:00<br>
+            <b>sábado</b> 20:00-01:00<br>
+            <b>domingo</b> 20:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 99710-4482
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.961623367913!2d-52.342998184279914!3d-31.77153262070008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b595fcce7f4d%3A0x1e407f0caa19a3c0!2sJohnnie+Jack!5e0!3m2!1spt-BR!2sbr!4v1512445109002" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal37" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">O Escritório Bar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 18:00-04:00<br>
+            <b>quarta-feira</b> 18:00-04:00<br>
+            <b>quinta-feira</b> 18:00-04:00<br>
+            <b>sexta-feira</b> 18:00-04:00<br>
+            <b>sábado</b> 18:00-04:00<br>
+            <b>domingo</b> 18:00-04:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 99146-6589
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.0277534593474!2d-52.34529868428048!3d-31.74244341927617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b56b874270df%3A0x64607345a810ecc4!2sO+Escrit%C3%B3rio+Bar!5e0!3m2!1spt-BR!2sbr!4v1512445229544" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal38" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Botequim Das Goordas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 19:00-02:00<br>
+            <b>quarta-feira</b> 19:00-02:00<br>
+            <b>quinta-feira</b> 19:00-02:00<br>
+            <b>sexta-feira</b> 19:00-02:00<br>
+            <b>sábado</b> 19:00-02:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 99176-8398
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3721304562196!2d-52.34134718428024!3d-31.760334820151737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a1f4744b29%3A0xe520b81f04ce7a34!2sBotequim+Das+Goordas!5e0!3m2!1spt-BR!2sbr!4v1512445322648" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal39" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bar do Zé</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-02:00<br>
+            <b>terça-feira</b> 19:00-03:00<br>
+            <b>quarta-feira</b> 19:00-03:00<br>
+            <b>quinta-feira</b> 19:00-04:00<br>
+            <b>sexta-feira</b> 19:00-04:00<br>
+            <b>sábado</b> 22:00-00:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 98401-6717
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.6159400209112!2d-52.34171768427978!3d-31.780959421161743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5c20509cc73%3A0xeb1d03c6d642d2f4!2sBar+do+Z%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1512445452813" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal40" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Boteco do Cruz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 16:00-00:00<br>
+            <b>terça-feira</b> 16:00-00:00<br>
+            <b>quarta-feira</b> 16:00-00:00<br>
+            <b>quinta-feira</b> 16:00-00:00<br>
+            <b>sexta-feira</b> 16:00-00:00<br>
+            <b>sábado</b> 11:00-16:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-5925
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1583073967904!2d-52.34251198427995!3d-31.76616792043741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b597fbfe7991%3A0x662d3335ae8f1539!2sBoteco+do+Cruz!5e0!3m2!1spt-BR!2sbr!4v1512445545385" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal41" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sherlock Pub</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:30-00:30<br>
+            <b>terça-feira</b> 18:30-00:30<br>
+            <b>quarta-feira</b> 18:30-00:30<br>
+            <b>quinta-feira</b> 18:30-00:30<br>
+            <b>sexta-feira</b> 18:30-00:00<br>
+            <b>sábado</b> 19:30-02:00<br>
+            <b>domingo</b> 19:30-00:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3029-1130
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.846789585767!2d-52.34450968427995!3d-31.774664420853416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59504b1592d%3A0xa756672294088807!2sSherlock+Pub!5e0!3m2!1spt-BR!2sbr!4v1512445649019" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal42" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Choperia Cruz de Malta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-01:00<br>
+            <b>terça-feira</b> 18:00-01:00<br>
+            <b>quarta-feira</b> 18:00-01:00<br>
+            <b>quinta-feira</b> 18:00-01:00<br>
+            <b>sexta-feira</b> 18:00-01:00<br>
+            <b>sábado</b> 18:00-01:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3283-7702
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.829720665218!2d-52.33628418428051!3d-31.747848519540533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b4fe22afb2ab%3A0x61957c9fafbe3643!2sChoperia+Cruz+de+Malta!5e0!3m2!1spt-BR!2sbr!4v1512445742322" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal43" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Diabluras Gastronômicas - Pub e Petisqueria</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-01:00<br>
+            <b>terça-feira</b> 18:00-01:00<br>
+            <b>quarta-feira</b> 18:00-01:00<br>
+            <b>quinta-feira</b> 18:00-01:00<br>
+            <b>sexta-feira</b> 18:00-01:00<br>
+            <b>sábado</b> 18:00-01:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 98137-2610
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.285386264321!2d-52.33911228428017!3d-31.762701320267567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5c040291d57%3A0x6a7c27af69d957a6!2sDiabluras+Gastron%C3%B4micas+-+Pub+%26+Petisqueria!5e0!3m2!1spt-BR!2sbr!4v1512445849216" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal44" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Madre Mia!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:30-14:00<br>
+            <b>terça-feira</b> 11:30-14:00, 18:00-00:00<br>
+            <b>quarta-feira</b> 11:30-14:00, 18:00-00:00<br>
+            <b>quinta-feira</b> 11:30-14:00, 18:00-00:00<br>
+            <b>sexta-feira</b> 11:30-14:00, 18:00-02:00<br>
+            <b>sábado</b> 11:30-14:00, 18:00-02:00<br>
+            <b>domingo</b> 11:30-14:00, 18:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3303-4075
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0954085513163!2d-52.33924458427992!3d-31.767883620521445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5bc53b54e21%3A0xfd1a16da455bbf33!2sMadre+Mia*21!5e0!3m2!1spt-BR!2sbr!4v1512446001961" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal45" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Polaka Lanches Pelotas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-00:00<br>
+            <b>terça-feira</b> 19:00-00:00<br>
+            <b>quarta-feira</b> 19:00-00:00<br>
+            <b>quinta-feira</b> 19:00-00:00<br>
+            <b>sexta-feira</b> 19:00-00:00<br>
+            <b>sábado</b> 19:00-00:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3279-1810
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.946592646233!2d-52.372815284280584!3d-31.744658719384443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511caa2de85a8a7%3A0x448503a47225ccc!2sPolaka+Lanches+Pelotas!5e0!3m2!1spt-BR!2sbr!4v1512447139604" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal46" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Dago's Lanches</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 17:00-00:00<br>
+            <b>quarta-feira</b> 17:00-00:00<br>
+            <b>quinta-feira</b> 17:00-00:00<br>
+            <b>sexta-feira</b> 17:00-00:00<br>
+            <b>sábado</b> 17:00-00:00<br>
+            <b>domingo</b> 17:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3278-5789
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0186588215875!2d-52.36214168427999!3d-31.769977020623838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5870cd09245%3A0xf4a0aceed01186d5!2sDago&#39;s+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512447215323" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal47" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">RM Lanches</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 18:30-01:00<br>
+            <b>quarta-feira</b> 18:30-01:00<br>
+            <b>quinta-feira</b> 18:30-01:00<br>
+            <b>sexta-feira</b> 18:30-01:00<br>
+            <b>sábado</b> 18:30-01:00<br>
+            <b>domingo</b> 18:30-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3281-2033
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.5186788858205!2d-52.38005778428033!3d-31.756336419955865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511ca98443774a7%3A0xe718629ad72fd728!2sRM+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512447325064" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal48" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Komilão Lanches</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-01:00<br>
+            <b>terça-feira</b> 19:00-01:00<br>
+            <b>quarta-feira</b> 19:00-01:00<br>
+            <b>quinta-feira</b> 19:00-01:00<br>
+            <b>sexta-feira</b> 19:00-01:00<br>
+            <b>sábado</b> 19:00-01:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3229-1939
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1502751963017!2d-52.35006458427994!3d-31.766387020448096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59af65569e5%3A0x9fb557975157c7f5!2sKomil%C3%A3o+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512447455725" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal49" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Circulu's Lanches (Deodoro)</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-01:00<br>
+            <b>terça-feira</b> 18:00-01:00<br>
+            <b>quarta-feira</b> 18:00-01:00<br>
+            <b>quinta-feira</b> 18:00-01:00<br>
+            <b>sexta-feira</b> 18:00-01:00<br>
+            <b>sábado</b> 18:00-01:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-6077
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3446031354274!2d-52.344097484280255!3d-31.761085820188516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59f3a85bd1b%3A0x534e06a5bc086028!2sCirculu&#39;s+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512447542281" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal50" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Circulu's Lanches(Três de Maio)</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-01:00<br>
+            <b>terça-feira</b> 18:00-01:00<br>
+            <b>quarta-feira</b> 18:00-01:00<br>
+            <b>quinta-feira</b> 18:00-01:00<br>
+            <b>sexta-feira</b> 18:00-01:00<br>
+            <b>sábado</b> 18:00-01:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3027-6077
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.8177476982282!2d-52.34260828427986!3d-31.775456420892088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59515aa9c45%3A0xa7d8de6dcbe69c6c!2sCirculu&#39;s+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512447637910" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal51" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sanata Lanches da Três de maio</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-01:00<br>
+            <b>terça-feira</b> 18:00-01:00<br>
+            <b>quarta-feira</b> 18:00-01:00<br>
+            <b>quinta-feira</b> 18:00-01:00<br>
+            <b>sexta-feira</b> 18:00-01:00<br>
+            <b>sábado</b> 18:00-01:00<br>
+            <b>domingo</b> 18:00-01:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3227-2575
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.848168325929!2d-52.34460098427982!3d-31.7746268208516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5c12720a153%3A0xfe5a7bc48b9e39f9!2sSanata+Lanches+da+Tr%C3%AAs+de+maio!5e0!3m2!1spt-BR!2sbr!4v1512447734779" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal52" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sanata Lanches Anchieta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-00:00<br>
+            <b>terça-feira</b> 18:00-00:00<br>
+            <b>quarta-feira</b> 18:00-00:00<br>
+            <b>quinta-feira</b> 18:00-00:00<br>
+            <b>sexta-feira</b> 18:00-00:00<br>
+            <b>sábado</b> 18:00-00:00<br>
+            <b>domingo</b> 18:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3028-2575
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.8636900525594!2d-52.344841384279945!3d-31.774203520830806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5950061801d%3A0xd08b0eb8df3fdedf!2sSanata+Lanches+Anchieta!5e0!3m2!1spt-BR!2sbr!4v1512447848443" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal53" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Dadá Lanches e Pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 15:30-01:00<br>
+            <b>terça-feira</b> 15:30-01:00<br>
+            <b>quarta-feira</b> 15:30-01:00<br>
+            <b>quinta-feira</b> 15:30-01:00<br>
+            <b>sexta-feira</b> 15:30-01:00<br>
+            <b>sábado</b> 15:30-01:00<br>
+            <b>domingo</b> 15:30-01:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-6329
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.6792764550187!2d-52.34308268427972!3d-31.77923242107707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5ea6efe530f%3A0xb4e4b6fd56ad795d!2sDad%C3%A1+Lanches+%26+Pizza!5e0!3m2!1spt-BR!2sbr!4v1512447929646" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal54" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ronaldo Lanches</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-00:00<br>
+            <b>terça-feira</b> 18:00-00:00<br>
+            <b>quarta-feira</b> 18:00-00:00<br>
+            <b>quinta-feira</b> 18:00-00:00<br>
+            <b>sexta-feira</b> 18:00-00:00<br>
+            <b>sábado</b> 18:00-00:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3273-2956
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.6117176896846!2d-52.33396538428099!3d-31.72649991849601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b53afdfb7bf3%3A0xb43daa37aa33d9f0!2sRonaldo+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512448053211" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal55" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Lanches Mak Mello</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-00:00<br>
+            <b>terça-feira</b> Fechado<br>
+            <b>quarta-feira</b> 18:00-00:00<br>
+            <b>quinta-feira</b> 18:00-00:00<br>
+            <b>sexta-feira</b> 18:00-00:00<br>
+            <b>sábado</b> 18:00-00:00<br>
+            <b>domingo</b> 18:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3221-3372
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.4869105357934!2d-52.37487438428023!3d-31.757203219998374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511ca90014c0b5f%3A0x2cfebac3f813f783!2sLanches+Mak+Mello!5e0!3m2!1spt-BR!2sbr!4v1512448161393" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal56" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Polonga Lanches</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-01:00<br>
+            <b>terça-feira</b> Fechado<br>
+            <b>quarta-feira</b> 19:00-01:00<br>
+            <b>quinta-feira</b> 19:00-01:00<br>
+            <b>sexta-feira</b> 19:00-01:00<br>
+            <b>sábado</b> 19:00-01:00<br>
+            <b>domingo</b> 19:00-01:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3281-4338
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.5943583173103!2d-52.39434568428009!3d-31.754271419854977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511cac2a1aef8df%3A0x37c25657138a43bd!2sPolonga+Lanches!5e0!3m2!1spt-BR!2sbr!4v1512448303762" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="modal57" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">McDonald's</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:00–23:00<br>
+            <b>terça-feira</b> 11:00–23:00<br>
+            <b>quarta-feira</b> 11:00–23:00<br>
+            <b>quinta-feira</b> 11:00–23:00<br>
+            <b>sexta-feira</b> 11:00–23:00<br>
+            <b>sábado</b> 11:00–23:00<br>
+            <b>domingo</b> 11:00–23:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3227-6055
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3043007669844!2d-52.336749684280235!3d-31.762185320242235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a49ccc691d%3A0xe36dd07ce17dc430!2sMcDonald&#39;s!5e0!3m2!1spt-BR!2sbr!4v1512450311021" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal58" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cafe.Com</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 07:30-22:30<br>
+            <b>terça-feira</b> 07:30-22:30<br>
+            <b>quarta-feira</b> 07:30-22:30<br>
+            <b>quinta-feira</b> 07:30-22:30<br>
+            <b>sexta-feira</b> 07:30-22:30<br>
+            <b>sábado</b> 07:30–15:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-1499
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1693236385668!2d-52.3424508842801!3d-31.7658674204226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59801a7fa69%3A0x26b8c02d7039ec88!2sCafe.Com!5e0!3m2!1spt-BR!2sbr!4v1512450418328" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal59" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Café Aquários</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 07:00-21:00<br>
+            <b>terça-feira</b> 07:00-21:00<br>
+            <b>quarta-feira</b> 07:00-21:00<br>
+            <b>quinta-feira</b> 07:00-21:00<br>
+            <b>sexta-feira</b> 07:00-21:00<br>
+            <b>sábado</b> 07:00-21:00<br>
+            <b>domingo</b> 07:00-21:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-6544
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0932235160685!2d-52.34320088428009!3d-31.767943220524284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b597b567a2dd%3A0x4402d00c51284acf!2zQ2Fmw6kgQXF1w6FyaW9z!5e0!3m2!1spt-BR!2sbr!4v1512450494056" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal60" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Picanha Express</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:00-14:30<br>
+            <b>terça-feira</b> 11:00-14:30<br>
+            <b>quarta-feira</b> 11:00-14:30<br>
+            <b>quinta-feira</b> 11:00-14:30<br>
+            <b>sexta-feira</b> 11:00-14:30<br>
+            <b>sábado</b> 11:00-14:30<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3305-3186
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1806330609243!2d-52.34208298428008!3d-31.765558920407475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a2a976a887%3A0x51e88ab6c034bf7c!2sPicanha+Express!5e0!3m2!1spt-BR!2sbr!4v1512450573331" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal61" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confeitaria Otto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 09:00–19:30<br>
+            <b>terça-feira</b> 09:00–19:30<br>
+            <b>quarta-feira</b> 09:00–19:30<br>
+            <b>quinta-feira</b> 09:00–19:30<br>
+            <b>sexta-feira</b> 09:00–19:30<br>
+            <b>sábado</b> 09:00–18:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-7836
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0970656561444!2d-52.34366358427999!3d-31.76783842051911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b597cfd4b321%3A0xb83f3c6bc60eaa5a!2sConfeitaria+Otto!5e0!3m2!1spt-BR!2sbr!4v1512450650503" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal62" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Alles Blau</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Site para reservas:</b><br>
+              <a href="http://www.hotelallesblau.com.br/">hotelallesblau.com.br</a>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-2223
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.1088486370913!2d-52.34459568428011!3d-31.76751702050333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b597bdbe289d%3A0x1824eef06b24102d!2sAlles+Blau!5e0!3m2!1spt-BR!2sbr!4v1512450754979" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal63" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Churrascaria Lobão</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 11:30–14:30, 19:00–00:00<br>
+            <b>quarta-feira</b> 11:30–14:30, 19:00–00:00<br>
+            <b>quinta-feira</b> 11:30–14:30, 19:00–00:00<br>
+            <b>sexta-feira</b> 11:30–14:30, 19:00–00:00<br>
+            <b>sábado</b> 11:30–14:30, 19:00–00:00<br>
+            <b>domingo</b> 11:30–14:30, 19:00–00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-6197
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.331733638121!2d-52.33901468428028!3d-31.761436920205703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a3b4725d93%3A0x9ffad94d8dd84b99!2sChurrascaria+Lob%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1512450944889" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal64" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cruz de Malta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:00–14:00, 19:00–23:30<br>
+            <b>terça-feira</b> 11:00–14:00, 19:00–23:30<br>
+            <b>quarta-feira</b> 11:00–14:00, 19:00–23:30<br>
+            <b>quinta-feira</b> 11:00–14:00, 19:00–23:30<br>
+            <b>sexta-feira</b> 11:00–14:00, 19:00–23:30<br>
+            <b>sábado</b> 11:00–14:00, 19:00–23:30<br>
+            <b>domingo</b> 11:00–14:00, 19:00–23:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3028-6835
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3281964284206!2d-52.34089208428006!3d-31.761533420210448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a217b95bf9%3A0xc594ae325c38bb25!2sCruz+de+Malta!5e0!3m2!1spt-BR!2sbr!4v1512451048593" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal65" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Parrillada El Paisano</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 19:00-23:30<br>
+            <b>quarta-feira</b> 19:00-23:30<br>
+            <b>quinta-feira</b> 19:00-23:30<br>
+            <b>sexta-feira</b> 19:00-23:30<br>
+            <b>sábado</b> 19:00-23:30<br>
+            <b>domingo</b> 11:30-14:00, 19:00-23:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3227-1507
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.418511390499!2d-52.34336568428011!3d-31.759069420089713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59f8e51fceb%3A0x5f6f0cd5183de154!2sParrillada+El+Paisano!5e0!3m2!1spt-BR!2sbr!4v1512451140021" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal66" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Grelhados Batuva</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:30–00:00<br>
+            <b>terça-feira</b> 19:30–00:00<br>
+            <b>quarta-feira</b> 19:30–00:00<br>
+            <b>quinta-feira</b> 19:30–00:00<br>
+            <b>sexta-feira</b> 19:30–00:00<br>
+            <b>sábado</b> 19:30–00:00<br>
+            <b>domingo</b> 12:00-14:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-0101
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.9279384243996!2d-52.34732608427988!3d-31.77245132074506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b596aa2ef7ef%3A0xa1f239f447ff208a!2sGrelhados+Batuva!5e0!3m2!1spt-BR!2sbr!4v1512451230119" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal67" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Shanghay Sushi Lounge</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 11:30-14:00, 19:00-23:00<br>
+            <b>quarta-feira</b> 11:30-14:00, 19:00-23:00<br>
+            <b>quinta-feira</b> 11:30-14:00, 19:00-23:00<br>
+            <b>sexta-feira</b> 11:30-14:00, 19:00-23:00<br>
+            <b>sábado</b> 11:30-14:00, 19:00-23:00<br>
+            <b>domingo</b> 11:30-14:00, 19:00-23:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3228-7601
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.604568289672!2d-52.34124798428028!3d-31.753992819841333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59864bf3a4d%3A0x63d3058e9658de55!2sShanghay+Sushi+Lounge!5e0!3m2!1spt-BR!2sbr!4v1512451300329" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal68" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Trem Bão</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+              <b>segunda-feira</b> 11:30-14:00<br>
+              <b>terça-feira</b> 11:30-14:00<br>
+              <b>quarta-feira</b> 11:30-14:00<br>
+              <b>quinta-feira</b> 11:30-14:00<br>
+              <b>sexta-feira</b> 11:30-14:00<br>
+              <b>sábado</b> Fechado<br>
+              <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3272-2446
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.9431658721714!2d-52.34756258427988!3d-31.772036020724677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b596aac4588b%3A0x78236ab6b7d96445!2zVHJlbSBCw6Nv!5e0!3m2!1spt-BR!2sbr!4v1512451375667" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal69" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Polo Norte</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:00-14:00<br>
+            <b>terça-feira</b> 11:00-14:00<br>
+            <b>quarta-feira</b> 11:00-14:00<br>
+            <b>quinta-feira</b> 11:00-14:00<br>
+            <b>sexta-feira</b> 11:00-14:00<br>
+            <b>sábado</b> 11:00-14:00<br>
+            <b>domingo</b> 11:00-14:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3227-3368
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.9859249713245!2d-52.34674818427996!3d-31.770869820667556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b596c5d42fe5%3A0x9c2617359dec79e8!2sPolo+Norte!5e0!3m2!1spt-BR!2sbr!4v1512451508071" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal70" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Chu</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 19:00-00:00<br>
+            <b>quarta-feira</b> 19:00-00:00<br>
+            <b>quinta-feira</b> 19:00-00:00<br>
+            <b>sexta-feira</b> 19:00-00:00<br>
+            <b>sábado</b> 19:00-00:00<br>
+            <b>domingo</b> 19:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-0250
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.7039372551894!2d-52.33722298428026!3d-31.751281219708517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b50bd94d5f21%3A0x960b94b13ffaaf0!2sChu!5e0!3m2!1spt-BR!2sbr!4v1512451586725" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal71" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Choperia Cruz de Malta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 18:00-01:00<br>
+            <b>terça-feira</b> 18:00-01:00<br>
+            <b>quarta-feira</b> 18:00-01:00<br>
+            <b>quinta-feira</b> 18:00-01:00<br>
+            <b>sexta-feira</b> 18:00-01:00<br>
+            <b>sábado</b> 18:00-01:00<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3283-7702
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.829720665218!2d-52.336284184280466!3d-31.74784851954053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b4fe22afb2ab%3A0x61957c9fafbe3643!2sChoperia+Cruz+de+Malta!5e0!3m2!1spt-BR!2sbr!4v1512451653540" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal72" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Madre Mia!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:30-14:00<br>
+            <b>terça-feira</b> 11:30-14:00, 18:00-00:00<br>
+            <b>quarta-feira</b> 11:30-14:00, 18:00-00:00<br>
+            <b>quinta-feira</b> 11:30-14:00, 18:00-00:00<br>
+            <b>sexta-feira</b> 11:30-14:00, 18:00-02:00<br>
+            <b>sábado</b> 11:30-14:00, 18:00-02:00<br>
+            <b>domingo</b> 11:30-14:00, 18:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3303-4075
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.0954085513163!2d-52.3392445842799!3d-31.76788362052145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5bc53b54e21%3A0xfd1a16da455bbf33!2sMadre+Mia*21!5e0!3m2!1spt-BR!2sbr!4v1512451712616" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal73" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ristorante Vesúvio</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 11:00-00:00<br>
+            <b>quarta-feira</b> 11:00-00:00<br>
+            <b>quinta-feira</b> 11:00-00:00<br>
+            <b>sexta-feira</b> 11:00-00:00<br>
+            <b>sábado</b> 11:00-00:00<br>
+            <b>domingo</b> 11:00-00:00<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3222-6708
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.242640674211!2d-52.34993168427989!3d-31.76386742032476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59b81b7b1e7%3A0xd417fedec3366575!2sRistorante+Ves%C3%BAvio!5e0!3m2!1spt-BR!2sbr!4v1512451799130" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal74" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tio Hugo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> Fechado<br>
+            <b>terça-feira</b> 19:00-23:30<br>
+            <b>quarta-feira</b> 19:00-23:30<br>
+            <b>quinta-feira</b> 19:00-23:30<br>
+            <b>sexta-feira</b> 19:00-23:30<br>
+            <b>sábado</b> 11:30-15:50, 19:00-00:00<br>
+            <b>domingo</b> 11:30-15:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3225-2292
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.6243503409423!2d-52.34476918428035!3d-31.753453019814867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b574f5853f0b%3A0x28d9127d19ff83e!2sTio+Hugo!5e0!3m2!1spt-BR!2sbr!4v1512451877104" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal75" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Churrascaria Tradição</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 19:00-23:30<br>
+            <b>terça-feira</b> 00:00–14:30, 19:00–23:30<br>
+            <b>quarta-feira</b> 00:00–14:30, 19:00–23:30<br>
+            <b>quinta-feira</b> 00:00–14:30, 19:00–23:30<br>
+            <b>sexta-feira</b> 00:00–14:30, 19:00–23:30<br>
+            <b>sábado</b> 00:00–14:30, 19:00–23:30<br>
+            <b>domingo</b> 00:00–14:30, 19:00–23:30<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3025-4040
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.3971867757305!2d-52.34472478428021!3d-31.759651220118254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59e55839afb%3A0x6bfa1d94e5d02243!2sChurrascaria+Tradi%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1512451949966" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal76" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="max-width: 635px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mendes Refeições</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <p style="width: 50%; float: left;">
+              <b style="color: #117a8b;">Horário:</b><br>
+            <b>segunda-feira</b> 11:00-14:30<br>
+            <b>terça-feira</b> 11:00-14:30<br>
+            <b>quarta-feira</b> 11:00-14:30<br>
+            <b>quinta-feira</b> 11:00-14:30<br>
+            <b>sexta-feira</b> 11:00-14:30<br>
+            <b>sábado</b> 11:00-14:30<br>
+            <b>domingo</b> Fechado<br>
+            </p>
+            <p style="width: 50%; float: left;">
+              <b>Telefone:</b> (53) 3221-3591
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.903260594375!2d-52.37085768428051!3d-31.745841419442325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511caa26563afa5%3A0x802ec61a478f3940!2zTWVuZGVzIFJlZmVpw6fDtWVz!5e0!3m2!1spt-BR!2sbr!4v1512452041725" width="600" height="450" frameborder="0" style="border:0;margin-top: 50px;" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="inside-logo">
+      <a href="https://www.facebook.com/mauricio.borges.524">
+        <div class="fb-logo">
+        </div>
+      </a>
+      <a href="https://twitter.com/M4urcioBorg3s">
+        <div class="tw-logo">
+        </div>
+      </a>
+      <a href="https://outlook.live.com/mail/#/inbox/id/AQQkADAwATdiZmYAZC04NDIzLTljNWItMDACLTAwCgAQAPautYoGEXRDnbdB6hNgo7s%3D">
+        <div class="gmail-logo">
+        </div>
+      </a>
+    </div>
+    <h3 class="footer-text-title">FIND PELOTAS</h3>
+  </footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.8.2/umd/popper.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
