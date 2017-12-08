@@ -454,21 +454,21 @@ p {
 
 @media screen and (max-width: 320px) {
   .pontos-turisticos {
-    height: 13410px;
+    height: 9400px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 340px) {
   .pontos-turisticos {
-    height: 13410px;
+    height: 9400px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 540px) {
   .pontos-turisticos {
-    height: 13410px;
+    height: 9400px;
     width: 100%;
   }
 }
@@ -481,6 +481,19 @@ p {
 @media screen and (max-width: 320px) {
   #card-turismo {
     width: 20rem!important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #card-turismo {
+    margin: 0px 0px 0px 70px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .teatroGuarany {
+    margin-top: 20px;
+    margin-left: 30px;
   }
 }
 
@@ -555,21 +568,21 @@ p {
 
 @media screen and (max-width: 320px) {
   .restaurantes-bares {
-    height: 13410px;
+    height: 9400px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 340px) {
   .restaurantes-bares {
-    height: 13410px;
+    height: 9400px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 540px) {
   .restaurantes-bares {
-    height: 13410px;
+    height: 9400px;
     width: 100%;
   }
 }
@@ -684,21 +697,21 @@ p {
 
 @media screen and (max-width: 320px) {
   .pizzarias {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 340px) {
   .pizzarias {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 540px) {
   .pizzarias {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
@@ -712,21 +725,21 @@ p {
 
 @media screen and (max-width: 320px) {
   .bares {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 340px) {
   .bares {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 540px) {
   .bares {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
@@ -740,22 +753,28 @@ p {
 
 @media screen and (max-width: 320px) {
   .lancherias {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 340px) {
   .lancherias {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 540px) {
   .lancherias {
-    height: 7960px;
+    height: 5560px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  iframe {
+    width: 485px;
   }
 }
 
