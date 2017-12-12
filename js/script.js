@@ -142,15 +142,7 @@ $(document).ready(function(){
         $(".cinemas").show();
     });
 
-
-
-
-
-
-
-
-
-    $("#btPesquisar").click(function(){
+    var buscaFunction = function() {
       var busca = $("#inBusca").val().toLowerCase();
       console.log(busca);
 
@@ -231,6 +223,16 @@ $(document).ready(function(){
          $(".bares").hide();
          $(".lancherias").show();
       }
+
+    };
+
+    $("#btPesquisar").click(buscaFunction);
+
+    $('#inBusca').keypress(function (e) {
+
+        if(e.which == 13) {
+            buscaFunction();
+        }
 
     });
   });
