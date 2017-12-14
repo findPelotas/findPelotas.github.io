@@ -473,6 +473,12 @@ p {
   }
 }
 
+@media screen and (min-width: 375px) and (max-width: 540px) {
+  .pontos-turisticos {
+    width: 100%;
+  }
+}
+
 #card-turismo {
   float: left;
   border: 1px solid #E0E0E0;
@@ -484,16 +490,16 @@ p {
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 320px) and (max-width: 540px) {
   #card-turismo {
-    margin: 0px 0px 0px 70px;
+    width: 20rem!important;
+    margin-left: 70px;
   }
 }
 
-@media screen and (max-width: 1280px) {
-  .teatroGuarany {
-    margin-top: 20px;
-    margin-left: 30px;
+@media screen and (min-width: 375px) and (max-width: 530px) {
+  #card-turismo {
+    margin: 0px 0px 0px 20px;
   }
 }
 
@@ -778,6 +784,11 @@ p {
   }
 }
 
+@media screen and (min-width: 375px) and (max-width: 530px) {
+  iframe {
+    width: 323px;
+  }
+}
 
 
 

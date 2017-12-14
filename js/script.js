@@ -223,7 +223,6 @@ $(document).ready(function(){
          $(".bares").hide();
          $(".lancherias").show();
       }
-
     };
 
     $("#btPesquisar").click(buscaFunction);
