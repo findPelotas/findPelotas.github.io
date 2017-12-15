@@ -159,7 +159,6 @@ $(document).ready(function(){
          $(".lancherias").hide();
       }
 
-
       if (busca == "cinemas"){
          $(".header").hide();
          $(".text-center").hide();
@@ -237,10 +236,7 @@ $(document).ready(function(){
          $(".pizzarias").hide();
          $(".bares").hide();
          $(".lancherias").hide();
-      }
-    };
-
-    $("#btPesquisar").click(buscaFunction);
+       }
 
       if (busca == "mercado central"){
          $('#modal1').modal('show');
@@ -1782,7 +1778,7 @@ $(document).ready(function(){
          $(".lancherias").hide();
       }
 
-      if (busca == "café aquárius"){
+      if (busca == "café aquarius"){
          $('#modal59').modal('show');
          $(".header").hide();
          $(".text-center").hide();
@@ -1810,7 +1806,7 @@ $(document).ready(function(){
          $(".lancherias").hide();
       }
 
-      if (busca == "confeitaria otto"){
+      if (busca == "otto"){
          $('#modal61').modal('show');
          $(".header").hide();
          $(".text-center").hide();
@@ -2271,5 +2267,11 @@ $(document).ready(function(){
          $(".bares").hide();
          $(".lancherias").hide();
       }
-    });
-  });
+
+
+
+      });
+});
+
+
+

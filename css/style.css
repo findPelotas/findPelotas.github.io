@@ -782,9 +782,7 @@ p {
   iframe {
     width: 485px;
   }
-<<<<<<< HEAD
-}
-=======
+
 }
 
 @media screen and (min-width: 375px) and (max-width: 530px) {
@@ -792,9 +790,3 @@ p {
     width: 323px;
   }
 }
-
-
-
-
-
->>>>>>> ec4a6cdb27944e105ebe37dfdfe6ba4c66db3271
