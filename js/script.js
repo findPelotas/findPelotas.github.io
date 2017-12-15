@@ -238,6 +238,9 @@ $(document).ready(function(){
          $(".bares").hide();
          $(".lancherias").hide();
       }
+    };
+
+    $("#btPesquisar").click(buscaFunction);
 
       if (busca == "mercado central"){
          $('#modal1').modal('show');
